@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import './index.css';
+import moment from 'moment'
 
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 
-import { DateRangePicker, SingleDatePicker } from 'react-dates';
-import { Label } from 'glamorous';
-import { Button } from "material-ui";
- 
+import { SingleDatePicker } from 'react-dates';
+
 
 class App extends Component {
   constructor(props) {
@@ -30,6 +29,7 @@ class App extends Component {
             focused={this.state.focused} // PropTypes.bool
             onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
             numberOfMonths={1}
+            placeholder={moment().format("MM/DD/YYYY")}
             showDefaultInputIcon
           />  
         </div>
