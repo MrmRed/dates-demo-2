@@ -30,11 +30,9 @@ class App extends Component {
             focused={this.state.focused} // PropTypes.bool
             onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
             numberOfMonths={1}
+            showDefaultInputIcon
           />  
-          <i className="fa fa-calendar labelIcon">          
-          </i>
         </div>
-       
       </div>
     );
   }
