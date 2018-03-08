@@ -6,6 +6,7 @@ import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 
 import { SingleDatePicker } from 'react-dates';
+import DropdownTest from '../Menu';
 
 
 class App extends Component {
@@ -19,6 +20,11 @@ class App extends Component {
   }
 
   render() {
+    const stateOptions = [  
+      { value: 'all', text: 'All' },
+      { value: 'articles', text: 'Articles' },
+      { value: 'products', text: 'Products' },
+    ];
     return (
       <div className="App">
         <div className="App3">
@@ -32,6 +38,7 @@ class App extends Component {
             placeholder={moment().format("MM/DD/YYYY")}
             showDefaultInputIcon
           />  
+          <DropdownTest placeholder='State' search selection options={stateOptions} />
         </div>
       </div>
     );
