@@ -7,6 +7,7 @@ import 'react-dates/lib/css/_datepicker.css';
 
 import { SingleDatePicker } from 'react-dates';
 import DropdownTest from '../Menu';
+import { Select } from 'semantic-ui-react';
 
 
 class App extends Component {
@@ -25,6 +26,7 @@ class App extends Component {
       { value: 'articles', text: 'Articles' },
       { value: 'products', text: 'Products' },
     ];
+    const countryOptions = [{ key: 'af', value: 'af', flag: 'af', text: 'Afghanistan' }]
     return (
       <div className="App">
         <div className="App3">
@@ -39,6 +41,12 @@ class App extends Component {
             showDefaultInputIcon
           />  
           <DropdownTest placeholder='State' search selection options={stateOptions} />
+
+
+
+
+        <Select placeholder='Select your country' options={countryOptions} />
+
         </div>
       </div>
     );
